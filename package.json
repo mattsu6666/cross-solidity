@@ -8,7 +8,7 @@
     "clean": "rm -rf build"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^3.4.1",
+    "@openzeppelin/contracts": "^4.7.3",
     "@hyperledger-labs/yui-ibc-solidity": "git+https://github.com/hyperledger-labs/yui-ibc-solidity.git#14bafbb5eaad4177151673adc8871674e76117ca",
     "@truffle/hdwallet-provider": "1.4.1",
     "truffle": "^5.3.14",
