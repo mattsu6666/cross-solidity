@@ -10,7 +10,7 @@ abstract contract IBCKeeper {
     IBCHandler ibcHandler;
     IBCHost ibcHost;
 
-    constructor(IBCHost host_, IBCHandler handler_) public {
+    constructor(IBCHost host_, IBCHandler handler_) {
         ibcHost = host_;
         ibcHandler = handler_;
     }
