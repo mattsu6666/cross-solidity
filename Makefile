@@ -14,6 +14,16 @@ test:
 solpb:
 	SOLPB_EXTERNAL_RUNTIME_REPO=$(SOLPB_EXTERNAL_RUNTIME_REPO) ./scripts/solpb.sh
 
+# run after sol files changed
+.PHONY: setup
+setup:
+	./scripts/setup.sh
+
+.PHONY: lint-go
+lint-go:
+	go fmt ./pkg/...
+	go vet ./pkg/...
+
 .PHONY: abi
 abi:
 ifdef SOURCE
