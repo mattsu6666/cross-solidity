@@ -17,7 +17,7 @@ solpb:
 # run after sol files changed
 .PHONY: setup
 setup:
-	./scripts/setup.sh
+	./scripts/setup.sh development
 
 .PHONY: lint-go
 lint-go:
