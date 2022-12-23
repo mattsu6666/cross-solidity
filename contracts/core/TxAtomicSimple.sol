@@ -2,10 +2,10 @@
 pragma solidity ^0.8.9;
 pragma experimental ABIEncoderV2;
 
-import "@hyperledger-labs/yui-ibc-solidity/contracts/core/IBCHandler.sol";
+// import "@hyperledger-labs/yui-ibc-solidity/contracts/core/25-handler/IBCHandler.sol";
 import {
     GoogleProtobufAny as Any
-} from "@hyperledger-labs/yui-ibc-solidity/contracts/core/types/GoogleProtobufAny.sol";
+} from "@hyperledger-labs/yui-ibc-solidity/contracts/proto/GoogleProtobufAny.sol";
 import "./PacketHandler.sol";
 import "./ContractRegistry.sol";
 import "./IContractModule.sol";

@@ -4,6 +4,6 @@ pragma experimental ABIEncoderV2;
 
 import {
     MockClient as IBCMockClient
-} from "@hyperledger-labs/yui-ibc-solidity/contracts/core/MockClient.sol";
+} from "@hyperledger-labs/yui-ibc-solidity/contracts/clients/MockClient.sol";
 
-contract MockClient is IBCMockClient {}
+abstract contract MockClient is IBCMockClient {}

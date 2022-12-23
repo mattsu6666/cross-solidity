@@ -2,8 +2,8 @@
 pragma solidity ^0.8.9;
 pragma experimental ABIEncoderV2;
 
-import "@hyperledger-labs/yui-ibc-solidity/contracts/core/IBCHost.sol";
-import "@hyperledger-labs/yui-ibc-solidity/contracts/core/IBCHandler.sol";
+import "@hyperledger-labs/yui-ibc-solidity/contracts/core/24-host/IBCHost.sol";
+import "@hyperledger-labs/yui-ibc-solidity/contracts/core/25-handler/IBCHandler.sol";
 
 // IBCKeeper keeps the contracts of IBC
 abstract contract IBCKeeper {
