@@ -2,7 +2,10 @@
 pragma solidity ^0.8.9;
 pragma experimental ABIEncoderV2;
 
+import "@hyperledger-labs/yui-ibc-solidity/contracts/core/02-client/IBCClient.sol";  // unused
+import "@hyperledger-labs/yui-ibc-solidity/contracts/core/03-connection/IBCConnection.sol";  // unused
 import "@hyperledger-labs/yui-ibc-solidity/contracts/core/05-port/IIBCModule.sol";
+import "@hyperledger-labs/yui-ibc-solidity/contracts/core/24-host/IBCCommitment.sol";  // unused
 import "@hyperledger-labs/yui-ibc-solidity/contracts/core/24-host/IBCHost.sol";
 import "@hyperledger-labs/yui-ibc-solidity/contracts/core/25-handler/IBCHandler.sol";
 import "@openzeppelin/contracts/utils/Context.sol";

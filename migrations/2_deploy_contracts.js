@@ -5,13 +5,13 @@ const IBCConnection = artifacts.require("IBCConnection");
 const IBCChannel = artifacts.require("IBCChannel");
 const IBCHandler = artifacts.require("IBCHandler");
 const IBCMsgs = artifacts.require("IBCMsgs");
-const IBCIdentifier = artifacts.require("IBCIdentifier");
+const IBCCommitment = artifacts.require("IBCCommitment");
 const CrossSimpleModule = artifacts.require("CrossSimpleModule");
 const MockCrossContract = artifacts.require("MockCrossContract");
 
 const deployCore = async (deployer) => {
-  await deployer.deploy(IBCIdentifier);
-  await deployer.link(IBCIdentifier, [IBCHost, IBCHandler]);
+  await deployer.deploy(IBCCommitment);
+  await deployer.link(IBCCommitment, [IBCClient, IBCConnection, IBCChannel, IBCHost, IBCHandler]);
 
   await deployer.deploy(IBCMsgs);
   await deployer.link(IBCMsgs, [
@@ -22,13 +22,13 @@ const deployCore = async (deployer) => {
   ]);
 
   await deployer.deploy(IBCClient);
-  await deployer.link(IBCClient, [IBCHandler, IBCConnection, IBCChannel]);
+    await deployer.link(IBCClient, [IBCHandler, IBCConnection, IBCChannel, IBCCommitment]);
 
   await deployer.deploy(IBCConnection);
-  await deployer.link(IBCConnection, [IBCHandler, IBCChannel]);
+  await deployer.link(IBCConnection, [IBCHandler, IBCChannel, IBCCommitment]);
 
   await deployer.deploy(IBCChannel);
-  await deployer.link(IBCChannel, [IBCHandler]);
+  await deployer.link(IBCChannel, [IBCHandler, IBCCommitment]);
 
   await deployer.deploy(MockClient);
 
