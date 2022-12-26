@@ -6,4 +6,4 @@ import {
     MockClient as IBCMockClient
 } from "@hyperledger-labs/yui-ibc-solidity/contracts/clients/MockClient.sol";
 
-abstract contract MockClient is IBCMockClient {}
+abstract contract CrossMockClient is IBCMockClient {}

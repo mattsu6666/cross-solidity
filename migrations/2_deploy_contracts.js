@@ -22,7 +22,7 @@ const deployCore = async (deployer) => {
   ]);
 
   await deployer.deploy(IBCClient);
-    await deployer.link(IBCClient, [IBCHandler, IBCConnection, IBCChannel, IBCCommitment]);
+  await deployer.link(IBCClient, [IBCHandler, IBCConnection, IBCChannel, IBCCommitment]);
 
   await deployer.deploy(IBCConnection);
   await deployer.link(IBCConnection, [IBCHandler, IBCChannel, IBCCommitment]);
@@ -30,7 +30,7 @@ const deployCore = async (deployer) => {
   await deployer.deploy(IBCChannel);
   await deployer.link(IBCChannel, [IBCHandler, IBCCommitment]);
 
-  await deployer.deploy(MockClient);
+  await deployer.deploy(MockClient, IBCHandler.address);
 
   await deployer.deploy(IBCHost);
   await deployer.deploy(IBCHandler, IBCHost.address);
